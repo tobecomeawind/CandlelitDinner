@@ -14,6 +14,11 @@ void initTests(void)
   tests.push_back(BodyContainTest2);
   tests.push_back(BodyContainTest3);
 
+  // Contains
+  tests.push_back(ContainTest1);
+  tests.push_back(ContainTest2);
+  tests.push_back(ContainTest3);
+  
 }
 
 int launchTests(void)
@@ -71,21 +76,95 @@ int launchTests(void)
 
 
 
-Candle BodyContainObject(241.12, 244.89, 233.89, 243.11);
-
+Candle Object(241.12, 244.89, 233.89, 243.11);
+//--------------
+// Body contain
+//--------------
 static bool BodyContainTest1(void)
 {
 	// Тест проходит хотя значение оставляет желать лучшего	
 	
-	return BodyContainObject.body_contains(241.119999999999999); 
+	return Object.body_contains(241.119999999999999); 
 }
+
 
 static bool BodyContainTest2(void)
 {
-	return BodyContainObject.body_contains(243.1100000000000001); 
+	return Object.body_contains(243.1100000000000001); 
 }
+
 
 static bool BodyContainTest3(void)
 {
-	return BodyContainObject.body_contains(242.2); 
+	return Object.body_contains(242.2); 
 }
+
+
+
+//--------------
+// Contain
+//--------------
+static bool ContainTest1(void)
+{	
+	return Object.contains(244.890000000000000001); 
+}
+
+static bool ContainTest2(void)
+{	
+	return Object.contains(233.889999999999999999); 
+}
+
+static bool ContainTest3(void)
+{	
+	return Object.contains(233.99); 
+}
+
+
+
+//--------------
+// Full size
+//--------------
+static bool FullSizeTest1(void)
+{	
+	return Object.full_size(); 
+}
+
+static bool FullSizeTest2(void)
+{	
+	Candle Object(999, 15.9813, 5, 999);	
+	return Object.full_size() == 10.9813; 
+}
+
+static bool FullSizeTest3(void)
+{	
+	Candle Object(999, 0, -1, 999);	
+	return Object.full_size() == 1; 
+}
+
+
+
+//--------------
+// Body size
+//--------------
+static bool BodySizeTest1(void)
+{	
+	return Object.body_size(); 
+}
+
+static bool BodySizeTest2(void)
+{	
+	Candle Object(15.9813, 999, 999, 5);	
+	return Object.body_size() == 10.9813; 
+}
+
+static bool BodySizeTest3(void)
+{	
+	Candle Object(0, 999, 999, -1);	
+	return Object.body_size() == 1; 
+}
+
+
+
+
+
+
