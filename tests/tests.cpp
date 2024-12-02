@@ -29,10 +29,15 @@ void initTests(void)
   tests.push_back(BodySizeTest2);
   tests.push_back(BodySizeTest3);
   
-  // Body size
+  // Is red 
   tests.push_back(IsRedTest1);
   tests.push_back(IsRedTest2);
   tests.push_back(IsRedTest3);
+  
+  // Is green
+  tests.push_back(IsGreenTest1);
+  tests.push_back(IsGreenTest2);
+  tests.push_back(IsGreenTest3);
 }
 
 int launchTests(void)
@@ -191,11 +196,33 @@ static bool IsRedTest1(void)
 static bool IsRedTest2(void)
 {	
 	Candle Object(15.9813, 0, 0, 15.9812);	
-	return Object.body_size(); 
+	return Object.is_red(); 
 }
 
 static bool IsRedTest3(void)
 {	
+	Candle Object(1, 999, 999, 0.99999);	
+	return Object.is_red(); 
+}
+
+
+
+//--------------
+// Is green
+//--------------
+static bool IsGreenTest1(void)
+{	
+	return Object.is_green(); 
+}
+
+static bool IsGreenTest2(void)
+{	
+	Candle Object(15.981, 0, 0, 15.9812);	
+	return Object.is_green(); 
+}
+
+static bool IsGreenTest3(void)
+{	
 	Candle Object(-1, 999, 999, -0.99999);	
-	return Object.body_size(); 
+	return Object.is_green(); 
 }
