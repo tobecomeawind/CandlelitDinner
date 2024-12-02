@@ -20,3 +20,7 @@ static bool FullSizeTest3(void);
 static bool BodySizeTest1(void);
 static bool BodySizeTest2(void);
 static bool BodySizeTest3(void);
+
+static bool IsRedTest1(void);
+static bool IsRedTest2(void);
+static bool IsRedTest3(void);
