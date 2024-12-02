@@ -18,6 +18,11 @@ void initTests(void)
   tests.push_back(ContainTest1);
   tests.push_back(ContainTest2);
   tests.push_back(ContainTest3);
+ 
+  // Full size
+  tests.push_back(FullSizeTest1);
+  tests.push_back(FullSizeTest2);
+  tests.push_back(FullSizeTest3);
   
 }
 
@@ -162,8 +167,6 @@ static bool BodySizeTest3(void)
 	Candle Object(0, 999, 999, -1);	
 	return Object.body_size() == 1; 
 }
-
-
 
 
 

@@ -13,4 +13,8 @@ static bool ContainTest1(void);
 static bool ContainTest2(void);
 static bool ContainTest3(void);
 
+static bool FullSizeTest1(void);
+static bool FullSizeTest2(void);
+static bool FullSizeTest3(void);
+
 
