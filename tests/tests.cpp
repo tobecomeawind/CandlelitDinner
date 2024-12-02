@@ -24,6 +24,10 @@ void initTests(void)
   tests.push_back(FullSizeTest2);
   tests.push_back(FullSizeTest3);
   
+  // Body size
+  tests.push_back(BodySizeTest1);
+  tests.push_back(BodySizeTest2);
+  tests.push_back(BodySizeTest3);
 }
 
 int launchTests(void)

@@ -17,4 +17,6 @@ static bool FullSizeTest1(void);
 static bool FullSizeTest2(void);
 static bool FullSizeTest3(void);
 
-
+static bool BodySizeTest1(void);
+static bool BodySizeTest2(void);
+static bool BodySizeTest3(void);
