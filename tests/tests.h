@@ -5,4 +5,6 @@
 void initTests  (void);
 int  launchTests(void);
 
-bool testUnitTestFunction(void);
+static bool BodyContainTest1(void);
+static bool BodyContainTest2(void);
+static bool BodyContainTest3(void);
